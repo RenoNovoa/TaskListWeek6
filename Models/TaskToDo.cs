@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using CapstonTask.Data;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,6 +23,6 @@ namespace CapstonTask.Models
         public DateTime DueDate { get; set; }
 
        
-        public IdentityUser User { get; set; }
+        public ApplicationUser User { get; set; }
     }
 }

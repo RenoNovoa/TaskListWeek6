@@ -1,4 +1,5 @@
-﻿using CapstonTask.Models;
+﻿using CapstonTask.Data;
+using CapstonTask.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -11,9 +12,12 @@ namespace CapstonTask.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        //private readonly ApplicationDbContext _context;
+
+        public HomeController(ILogger<HomeController> logger /*ApplicationDbContext context*/)
         {
             _logger = logger;
+           // _context = context;
         }
 
         public IActionResult Index()
